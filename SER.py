@@ -279,8 +279,8 @@ model.summary()
 # history = model.fit(x_train, y_train, validation_split=0.2, epochs=50, batch_size=128)
 
 
-early_stopping = EarlyStopping(monitor='val_loss', patience=3)
-history = model.fit(x_train, y_train, validation_split=0.2, epochs=50, batch_size=64, callbacks=[early_stopping])
+# early_stopping = EarlyStopping(monitor='val_loss', patience=3)
+history = model.fit(x_train, y_train, validation_split=0.2, epochs=50, batch_size=64) #callbacks=[early_stopping])
 
 print("Accuracy of our model on test data : " , model.evaluate(x_test,y_test)[1]*100 , "%")
 
